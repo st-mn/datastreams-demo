@@ -129,6 +129,7 @@ contract DataStreamsConsumer is
 
     /**
      * @dev Checks the log data using Chainlink Data Streams via the StreamsLookup error.
+     * Note: To be compatible with CCIP API the log function must return in such format as StreamLookup error.
      * Once StreamsLookUp error is emitted the data in the error is passed
      * to the checkCallback function. Which afterwards executes performUpkeep.
      * @param log The log data to be checked.
